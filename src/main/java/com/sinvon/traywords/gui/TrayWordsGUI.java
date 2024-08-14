@@ -11,10 +11,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 /**
- * @description: 托盘界面
  * @author sinvon
+ * @description: 托盘界面
  * @since 2024年8月14日17:24:53
  */
 @Slf4j
@@ -68,44 +69,21 @@ public class TrayWordsGUI {
     public PopupMenu popupMenu() {
         // 创建上下文菜单
         PopupMenu popupMenu = new PopupMenu();
-        // 创建"Show"菜单项
-        MenuItem showItem = new MenuItem("显示");
-        // 创建"Hide"菜单项
-        MenuItem hideItem = new MenuItem("隐藏");
-        // 创建"Exit"菜单项
-        MenuItem exitItem = new MenuItem("退出");
+        // 定义操作与对应的方法 - Runnable为方法
+        HashMap<String, Runnable> menuActions = new HashMap<>();
+        menuActions.put("show", () -> TrayWordsAction.showWindow(window));
+        menuActions.put("hide", () -> TrayWordsAction.hideWindow(window));
+        menuActions.put("exit", () -> TrayWordsAction.exitApplication(trayIcon));
 
-        // 为"Show"菜单项添加动作监听器
-        showItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 显示窗口的方法
-                TrayWordsAction.showWindow(window);
-            }
-        });
-
-        // 为"Hide"菜单项添加动作监听器
-        hideItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 隐藏窗口的方法
-                TrayWordsAction.hideWindow(window);
-            }
-        });
-
-        // 为"Exit"菜单项添加动作监听器
-        exitItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // 退出应用的方法
-                TrayWordsAction.exitApplication(trayIcon);
-            }
-        });
-
-        // 将菜单项添加到上下文菜单
-        popupMenu.add(showItem);
-        popupMenu.add(hideItem);
-        popupMenu.add(exitItem);
+        // 依次给每个“托盘上下文对象”赋于监听器
+        for (HashMap.Entry<String, Runnable> entry : menuActions.entrySet()) {
+            // 每次都新建一个菜单对象
+            MenuItem item = new MenuItem(entry.getKey());
+            // 为菜单项添加动作监听器，监听器中的方法指定为菜单项的点击事件
+            item.addActionListener(e -> entry.getValue().run());
+            // 将菜单项添加到上下文菜单
+            popupMenu.add(item);
+        }
         return popupMenu;
     }
 
