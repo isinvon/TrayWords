@@ -138,7 +138,7 @@ public class TrayWordsGUI {
         // 创建一个 JLabel 标签对象
         JLabel label = new JLabel("Drag Me!");
         // 设置标签字体
-        label.setFont(new Font("Arial", Font.BOLD, 18));
+        label.setFont(new Font("Microsoft YaHei", Font.BOLD, 18));
         // 设置标签文字颜色为白色
         label.setForeground(Color.WHITE);
         // 设置标签背景透明
