@@ -1,6 +1,7 @@
 package com.sinvon.traywords.gui;
 
 import com.sinvon.traywords.action.TrayWordsAction;
+import com.sinvon.traywords.utils.BaiCiZhanAPIUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -8,8 +9,6 @@ import static com.sinvon.traywords.common.SysConstant.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
@@ -117,8 +116,10 @@ public class TrayWordsGUI {
      * @return
      */
     public JPanel panel() {
+        // 获取 “单词+释义”
+        String words = BaiCiZhanAPIUtils.getWords();
         // 创建一个 JLabel 标签对象
-        JLabel label = new JLabel("Drag Me!");
+        JLabel label = new JLabel(words);
         // 设置标签字体
         label.setFont(new Font("Microsoft YaHei", Font.BOLD, 18));
         // 设置标签文字颜色为白色
