@@ -30,6 +30,12 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+        <!--注意：FeignClient使用报错的时候，需要注意SpringBoot和FeignClient对应（不是版本号对应）-->
+        <!--WebClient-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
         <!--Hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
