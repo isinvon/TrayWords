@@ -33,7 +33,7 @@ public class TrayWordsAction {
      */
     public static void hideWindow(JWindow window) {
         if (window != null && window.isVisible()) {
-            hideToEdge(window, Toolkit.getDefaultToolkit().getScreenSize());
+            window.setVisible(false);
         }
     }
 
