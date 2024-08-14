@@ -24,6 +24,7 @@ public class TrayWordsGUI {
 
     /**
      * 创建托盘图标图像
+     *
      * @return
      */
     public static Image createTrayIconImage() {
@@ -49,7 +50,8 @@ public class TrayWordsGUI {
 
         // 计算文字位置
         FontMetrics metrics = g2d.getFontMetrics(font);
-        String text = "W";
+        // 默认托盘图标字符
+        String text = trayIconText;
         int textWidth = metrics.stringWidth(text);
         int textHeight = metrics.getAscent();
         int x = (width - textWidth) / 2;

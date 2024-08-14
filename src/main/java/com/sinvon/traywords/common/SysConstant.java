@@ -58,5 +58,8 @@ public class SysConstant {
      * 屏幕大小对象 - 含有各种尺寸值（宽、高、缩放比例等）
      */
     public static Dimension screenSize;
-
+    /**
+     * 托盘默认文字
+     */
+    public static String trayIconText = "T";
 }
