@@ -62,4 +62,8 @@ public class SysConstant {
      * 托盘默认文字
      */
     public static String trayIconText = "T";
+    /**
+     * 项目默认字体风格
+     */
+    public final static String fontName = "微软雅黑";
 }
