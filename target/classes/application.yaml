@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: TrayWords
+    version: 1.0.0
+  datasource:
+    #    ~/就是在个人文件夹中
+    #    url: jdbc:h2:file:~/traywords;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    #    ./data/traywords 就是在当前项目下的data文件中创建一个名位traywords的数据库
+    url: jdbc:h2:file:./data/traywords;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: traywords
+    password: traywords
+
+  h2:
+    # H2 控制台配置: 通过 http://localhost:端口号/h2-console 访问
+    console:
+      # 默认不开启
+      enabled: true
+      path: /h2-console
+
+
+mybatis-plus:
+  #  xml 配置
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启mybatis-plus日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
