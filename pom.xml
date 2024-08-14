@@ -30,6 +30,12 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+        <!--Hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.14</version>
+        </dependency>
         <!--h2数据库-->
         <dependency>
             <groupId>com.h2database</groupId>
