@@ -86,6 +86,8 @@ public class TrayWordsGUI {
             // 将菜单项添加到上下文菜单
             popupMenu.add(item);
         }
+        // 修改托盘popupMenu菜单样式
+        popupMenu.setFont(new Font(fontName, Font.BOLD, 15));
         return popupMenu;
     }
 
