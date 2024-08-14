@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2bf9ba4-935c-42a4-a149-551ffb8d6806" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/TrayWordsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/action/MouseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/action/TrayWordsAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/common/SysConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/common/WinAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/controller/TrayWordsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/entity/TrayWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/extentions/NativeMethods.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/gui/TrayWordsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/mapper/TrayWordsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/service/TrayWordsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/service/impl/TrayWordsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/utils/WindowUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sinvon/traywords/TrayWordsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/traywords.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/traywords.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/gui/TrayWordsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sinvon/traywords/gui/TrayWordsGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +37,9 @@
   <component name="PerforceDirect.Settings">
     <option name="CHARSET" value="无" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2kcZvswtYoatI9YQZ8BzkMoCYVO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -72,7 +57,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.TrayWordsApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CodeProject/JAVAproject/项目/托盘单词/TrayWords",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,10 +95,22 @@
       <option name="presentableId" value="Default" />
       <updated>1723585060864</updated>
       <workItem from="1723585061935" duration="27096000" />
+      <workItem from="1723629076174" duration="755000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
