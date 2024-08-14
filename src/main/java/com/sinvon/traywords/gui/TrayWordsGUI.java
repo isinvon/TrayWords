@@ -69,11 +69,11 @@ public class TrayWordsGUI {
         // 创建上下文菜单
         PopupMenu popupMenu = new PopupMenu();
         // 创建"Show"菜单项
-        MenuItem showItem = new MenuItem("Show");
+        MenuItem showItem = new MenuItem("显示");
         // 创建"Hide"菜单项
-        MenuItem hideItem = new MenuItem("Hide");
+        MenuItem hideItem = new MenuItem("隐藏");
         // 创建"Exit"菜单项
-        MenuItem exitItem = new MenuItem("Exit");
+        MenuItem exitItem = new MenuItem("退出");
 
         // 为"Show"菜单项添加动作监听器
         showItem.addActionListener(new ActionListener() {
