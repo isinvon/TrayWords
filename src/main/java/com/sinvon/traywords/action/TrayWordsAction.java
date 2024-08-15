@@ -1,7 +1,10 @@
 package com.sinvon.traywords.action;
 
+import com.sinvon.traywords.utils.BaiCiZhanAPIUtils;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import static com.sinvon.traywords.common.SysConstant.*;
 
@@ -129,4 +132,22 @@ public class TrayWordsAction {
         // 将窗口置顶于所有应用之上，包括任务栏
         window.setAlwaysOnTop(true);
     }
+
+    /**
+     * 窗口监听 - 点击窗口切换单词
+     *
+     * @param
+     */
+    public static void clickWindow() {
+        // 添加监听窗口点击事件();
+        window.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                // 重新赋值
+                words = BaiCiZhanAPIUtils.getRandomWords();
+                System.out.println("你点击了我");
+            }
+        });
+    }
+
 }
