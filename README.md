@@ -6,36 +6,18 @@ TrayWords - 托盘单词
 ### 一些使用的API介绍
 1.  免费词典 API : `https://api.dictionaryapi.dev/api/<版本>/entries/en/<单词>`
     * 使用文档介绍：`https://github.com/meetDeveloper/freeDictionaryAPI`
-    * 
 #### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+软件架构说明：
+1. 技术栈
+   * Swing
+   * SpringBoot
+   * Java
+   * H2 database
+   * awt库
+   * Hutool库
+### 使用介绍
+1. 下载发行版之后，解压双击exe即可运行
+2. 运行之后会弹出单词窗口
+### 软件功能
+1. 通过点击文字、在文字上滚动鼠标滑轮可以实现随机切换单词
+2. 拖动窗口到屏幕边缘可以收缩吸附到边缘
