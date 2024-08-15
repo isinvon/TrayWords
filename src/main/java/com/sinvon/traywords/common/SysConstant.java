@@ -70,4 +70,8 @@ public class SysConstant {
      * 项目默认字体风格
      */
     public final static String fontName = "微软雅黑";
+    /**
+     * 单词
+     */
+    public static String words = "abandon";
 }
