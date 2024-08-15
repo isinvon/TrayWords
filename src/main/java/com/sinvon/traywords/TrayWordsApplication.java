@@ -64,6 +64,26 @@ public class TrayWordsApplication {
         // 将窗口类型设置为工具窗口，确保在所有窗口（包括任务栏）之上
         window.setType(Window.Type.UTILITY);
 
+        // 创建鼠标滚轮监听事件
+        window.addMouseWheelListener(e -> {
+            // 不论滚轮方向,都触发
+            if (e.getWheelRotation() != 0) {
+
+                System.out.println("滚轮滚动了");
+
+                // 清除window中所有对象 - 避免多个面板折叠在一起
+                window.getContentPane().removeAll();
+
+                // 创建面板对象
+                JPanel panel = trayWordsGUI.panel();
+
+                // 将面板添加到窗口
+                window.add(panel);
+
+                // 调整窗口大小以适应内容（让他适应其子组件的首选大小和布局）
+                window.pack();
+            }
+        });
 
         // 添加鼠标点击事件
         window.addMouseListener(new MouseAdapter() {
