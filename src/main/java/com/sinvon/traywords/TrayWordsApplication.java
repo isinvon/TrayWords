@@ -10,9 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // ---
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import static com.sinvon.traywords.common.SysConstant.*;
-
 
 
 /**
@@ -62,6 +63,32 @@ public class TrayWordsApplication {
 
         // 将窗口类型设置为工具窗口，确保在所有窗口（包括任务栏）之上
         window.setType(Window.Type.UTILITY);
+
+
+        // 添加鼠标点击事件
+        window.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("鼠标点击了");
+
+                // 清除window中所有对象 - 避免多个面板折叠在一起
+                window.getContentPane().removeAll();
+
+                // 创建面板对象
+                JPanel panel = trayWordsGUI.panel();
+
+                // 将面板添加到窗口
+                window.add(panel);
+
+                // 调整窗口大小以适应内容（让他适应其子组件的首选大小和布局）
+                window.pack();
+
+                // 记录窗口的原始宽度
+                originalWidth = window.getWidth();
+                // 记录窗口的原始高度
+                originalHeight = window.getHeight();
+            }
+        });
 
         // 创建面板对象
         JPanel panel = trayWordsGUI.panel();
