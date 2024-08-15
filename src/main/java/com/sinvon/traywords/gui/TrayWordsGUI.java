@@ -116,10 +116,14 @@ public class TrayWordsGUI {
      * @return
      */
     public JPanel panel() {
-        // 获取 “单词+释义”
-        String words = BaiCiZhanAPIUtils.getWords();
+        // String words = BaiCiZhanAPIUtils.getRandomWords();
+        String words1 = BaiCiZhanAPIUtils.getWords();
         // 创建一个 JLabel 标签对象
-        JLabel label = new JLabel(words);
+        if (label == null) {
+            label = new JLabel();
+            label.setText(words);
+        }
+        label.setText(words1);
         // 设置标签字体
         label.setFont(new Font("Microsoft YaHei", Font.BOLD, 18));
         // 设置标签文字颜色为白色
