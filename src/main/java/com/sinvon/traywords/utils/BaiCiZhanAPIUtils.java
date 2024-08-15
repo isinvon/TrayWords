@@ -100,7 +100,7 @@ public class BaiCiZhanAPIUtils {
     public static String getWords() {
         String randomWords = getRandomWords().replace(" ", "");
         String wordsMeaning = getWordsMeaning(randomWords).replace(" ", "");
-        log.info("随机单词: {}, 释义: {}", randomWords, wordsMeaning);
-        return MessageFormat.format("{0}: {1}", randomWords, wordsMeaning);
+        // log.info("随机单词: {}, 释义: {}", randomWords, wordsMeaning);
+        return MessageFormat.format("{0}：{1}", randomWords, wordsMeaning);
     }
 }
