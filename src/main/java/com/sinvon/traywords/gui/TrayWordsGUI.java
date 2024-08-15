@@ -7,9 +7,12 @@ import org.springframework.stereotype.Component;
 
 import static com.sinvon.traywords.common.SysConstant.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 
 /**
@@ -27,39 +30,49 @@ public class TrayWordsGUI {
      * @return
      */
     public static Image createTrayIconImage() {
-        final int width = 16; // 图标宽度
-        final int height = 16; // 图标高度
-        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2d = bufferedImage.createGraphics();
-
-        // 背景颜色和透明度
-        Color backgroundColor = new Color(0, 0, 0, 128); // 半透明黑色背景
-        g2d.setColor(backgroundColor);
-        g2d.fillRect(0, 0, width, height);
-
-        // 图标形状（圆形）
-        g2d.setColor(new Color(255, 255, 255, 255)); // 纯白色
-        g2d.fillOval(0, 0, width, height);
-
-        // 绘制文字
-        Color textColor = Color.RED; // 文字颜色
-        Font font = new Font("Arial", Font.BOLD, 10); // 文字大小
-        g2d.setColor(textColor);
-        g2d.setFont(font);
-
-        // 计算文字位置
-        FontMetrics metrics = g2d.getFontMetrics(font);
-        // 默认托盘图标字符
-        String text = trayIconText;
-        int textWidth = metrics.stringWidth(text);
-        int textHeight = metrics.getAscent();
-        int x = (width - textWidth) / 2;
-        int y = (height + textHeight) / 2 - 2; // 文字垂直居中
-
-        g2d.drawString(text, x, y);
-
-        g2d.dispose();
-        return bufferedImage;
+        // final int width = 16; // 图标宽度
+        // final int height = 16; // 图标高度
+        // BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        // Graphics2D g2d = bufferedImage.createGraphics();
+        //
+        // // 背景颜色和透明度
+        // Color backgroundColor = new Color(0, 0, 0, 128); // 半透明黑色背景
+        // g2d.setColor(backgroundColor);
+        // g2d.fillRect(0, 0, width, height);
+        //
+        // // 图标形状（圆形）
+        // g2d.setColor(new Color(255, 255, 255, 255)); // 纯白色
+        // g2d.fillOval(0, 0, width, height);
+        //
+        // // 绘制文字
+        // Color textColor = Color.RED; // 文字颜色
+        // Font font = new Font("Arial", Font.BOLD, 10); // 文字大小
+        // g2d.setColor(textColor);
+        // g2d.setFont(font);
+        //
+        // // 计算文字位置
+        // FontMetrics metrics = g2d.getFontMetrics(font);
+        // // 默认托盘图标字符
+        // String text = trayIconText;
+        // int textWidth = metrics.stringWidth(text);
+        // int textHeight = metrics.getAscent();
+        // int x = (width - textWidth) / 2;
+        // int y = (height + textHeight) / 2 - 2; // 文字垂直居中
+        //
+        // g2d.drawString(text, x, y);
+        //
+        // g2d.dispose();
+        try (InputStream inputStream = TrayWordsGUI.class.getClassLoader().getResourceAsStream("image/TrayWords.png")) {
+            if (inputStream == null) {
+                System.out.println("未找到指定的图片资源");
+                return null;
+            }
+            return ImageIO.read(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        // return bufferedImage;
     }
 
     /**
