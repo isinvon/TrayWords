@@ -85,6 +85,8 @@ public class MouseAction {
                     TrayWordsAction.hideToEdge(window, screenSize);
                 } else {
                     TrayWordsAction.showWindow(window);
+                    // 避免拖动的时候不会保持收缩时候的宽度 - 保持收缩前的宽度
+                    window.setSize(originalWidth, originalHeight);
                 }
             }
         });
