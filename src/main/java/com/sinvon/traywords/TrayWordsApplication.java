@@ -46,11 +46,7 @@ public class TrayWordsApplication {
         tray = SystemTray.getSystemTray();
 
         // 将托盘图标添加到系统托盘
-        try {
-            tray.add(trayIcon);
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
+        tray.add(trayIcon);
 
         // // 创建一个 JWindow 窗口对象，并且赋值给全局常量
         window = new JWindow();
