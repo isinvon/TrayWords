@@ -55,6 +55,10 @@ public class SysConstant {
      */
     public static JWindow window;
     /**
+     * 窗口对象的标签
+     */
+    public static JLabel label;
+    /**
      * 屏幕大小对象 - 含有各种尺寸值（宽、高、缩放比例等）
      */
     public static Dimension screenSize;
