@@ -3,6 +3,10 @@
 #### 介绍
 TrayWords - 托盘单词
 
+### 一些使用的API介绍
+1.  免费词典 API : `https://api.dictionaryapi.dev/api/<版本>/entries/en/<单词>`
+    * 使用文档介绍：`https://github.com/meetDeveloper/freeDictionaryAPI`
+    * 
 #### 软件架构
 软件架构说明
 
